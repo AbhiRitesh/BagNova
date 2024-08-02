@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="font-['helvetica_now_display']">
+    <nav class="shadow-lg w-full flex items-center justify-between px-5 py-4">
+        <div class="flex items-center justify-center gap-2">
+            <img class="w-16 h-16" src="/images/logo.png" alt="">
+            <h3 class="text-4xl">BagNova</h3>
+        </div>
+        <% var loggedin = typeof loggedin !== "undefined" ? loggedin : true %>
+        <% if(loggedin){ %>
+            <div class="flex gap-10 mr-10">
+                <a class="text-xl" href="/">Home</a>
+                <a class="text-xl" href="/shop">Shop</a>
+                <a class="text-xl" href="/cart">Cart</a>
+                <a class="text-xl" href="/account">My Account</a>
+                <a class="text-xl text-red-500" href="/users/logout">Logout</a>
+            </div>
+        <% } %>
+        
+    </nav>
